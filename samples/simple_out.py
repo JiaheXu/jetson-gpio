@@ -23,7 +23,7 @@ import RPi.GPIO as GPIO
 import time
 
 # Pin Definitions
-output_pin = 18  # BCM pin 18, BOARD pin 12
+output_pin = 22  # BCM pin 18, BOARD pin 12
 
 def main():
     # Pin Setup:
@@ -35,7 +35,7 @@ def main():
     curr_value = GPIO.HIGH
     try:
         while True:
-            time.sleep(1)
+            time.sleep(0.1)
             # Toggle the output every second
             print("Outputting {} to pin {}".format(curr_value, output_pin))
             GPIO.output(output_pin, curr_value)
